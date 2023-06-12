@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de calças</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">                                                   <!--código css importado do getbootstrap-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!--icones do bootstrap-->
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">                                  <!--"sticky-top" => para que o header acompanhe a página durante a rolagem / "p-4"-->
+        <div class="container">                                                                             <!--"p-4 => padding em todos os lados" / "navbar-expand-lg" => navegador expande em tela grande-->
+            <h1 class="navbar-brand m-0 section-title fs-2">Loja de calças</h1>                             <!--"m-0" => margem zero / "fs =>tamanho da fonte em 'rem'-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">      <!--"navbar-toggler" => Estiliza o menu hamburguer-->
+                <span class="navbar-toggler-icon"></span>                                                   <!--escrevendo o icone do menu hamburguer no navegador-->
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">                  <!--"navbar-collapse" => classe / "collapse" => para collpsar (suprimir) os itens (li) do navegador-->
+                <ul class="nav nav-pills d-block d-md-flex">                                                <!--"nav-pills" => para  que os links tenham aparência de botão / "d-block" => display block / "d-md-fle" => display (propriedade) middle display (breakpoint) display flex (valor)-->                                                              
+                    <li class="nav-item fw-bold">                                                           <!--"fw-bold" => font-weith bold-->
+                        <a href="#a-loja" class="nav-link">
+                            <i class="bi bi-house-door me-1"></i>                                           <!--"bi" => tag do icon bootstrap / "bi-house-door" => código bootstrap para adicionar o icone / "me-1" => margin-end = margin-rigth => distancia o icone do texto-->
+                            A loja                                                                          <!--"active" (quando usado) para que o primeiro link esteja ativo ao iniciar a página / "bi bi-house-door" => icone apropriado para 'sobre'-->
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">                                                           <!--"fw-bold" => font-weith bold-->              
+                        <a href="#moda" class="nav-link">
+                            <i class="bi bi-calendar-check me-1"></i>                                       <!--"bi bi-calendar-check" => icone de calendário-->
+                            Moda
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">                                                           <!--"fw-bold" => font-weith bold-->             
+                        <a href="#produtos" class="nav-link">
+                            <i class="bi bi-card-text me-1"></i>                                            <!--"bi bi-card-text" => icone apropriado para 'cardápio'-->
+                            Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">                                                           <!--"fw-bold" => font-weith bold-->
+                        <a href="#fale-conosco" class="nav-link">
+                            <i class="bi bi-chat-left-text me-1"></i>                                       <!--"bi bi-chat-left" => icone apropriado para 'fale coinosco'-->
+                            Fale conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">                      <!--"data-bs-spy=" => espiona e "scroll" rola a tela / "data-bs-target=" => quem (link) está sendo espionado-->                     
+        <section id="a-loja">                                                                               <!--"data-bs-smooth-scroll" => para garantir que cada seção apareça no a partir do seu topo no display ao ser acionada pelo menu-->
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">                              <!-- classe carousel de imagens / "carousel" => criado para ser manipulao pelos botões de recuar e avançar slide -->
+                <div class="carousel-inner">                                                                <!--classe que escreve o carouselk no html-->
+                    <div class="carousel-item active" data-bs-interval="3000">                              <!--classe para armazenar as imagens do slide / sem a classe "active" o carousel não é habilitado-->
+                        <img src="./images/slides/slide1.jpg" alt="Mulher sentada">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">                                     <!--classe para armazenar as imagens do slide-->
+                        <img src="./images/slides/slide2.jpg" alt ="familia feliz">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">                                     <!--classe para armazenar as imagens do slide-->
+                        <img src="./images/slides/slide3.jpg" alt="Mulher posando na rua">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">                                     <!--classe para armazenar as imagens do slide-->
+                        <img src="./images/slides/slide4.jpg" alt="homem sentado">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">        <!--classe do botão de retornar slide anterior / "data-bs-target" e "data-bs-slide" necessários para o funcionamento do botão-->
+                    <span class="carousel-control-prev-icon"></span>                                                        <!--escrevendo na tela o icone do botão-->
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">        <!--classe do botão de retornar slide anterior / "data-bs-target" e "data-bs-slide" necessários para o funcionamento do botão-->
+                    <span class="carousel-control-next-icon"></span>                                                <!--escrevendo na tela o icone do botão-->
+                </button>                                                                            
+                <div class="carousel-indicators">                                                                   <!--indicadores visuais no slide para mostrar qual imagem está sendo exibida-->
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>  <!--"data-bs-target=" => qual elemento o indicador afetar / "data-bs-slide-to=" => qual slide deve ser ativado quando o  indicador for acionado-->
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button>
+                </div>
+            </div>
+            <div class="pt-5 pb-5">                                                                             <!--"pt" => padding-top / "pb" => paddin-bottom-->
+                <div class="container">
+                    <div class="row">                                                   
+                        <div class="col-md-5">                                                                  <!--"col-md-5" => coluna em display middle 5 colunas-->
+                            <img src="/images/sobre a loja.jpg" class="d-block w-100 rounded" alt="Foto do espaço interno do restaurante">   <!--"d-block" => display block na imagem / "w-100" => Width 100% / "rounded" => imagem com cantos arredondados-->
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">                                                     <!--"col-md-7" => coluna em display middle 7 colunas / "mt-md-0" => margin-top = 0 para middle-display (display desktop)-->
+                            <h2 class="section-title">Sobre o <span class="text-colored">loja</span></h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quaerat expedita quisquam nihil voluptatum, sed, minus totam voluptatibus doloribus suscipit nisi libero aspernatur, sunt ducimus excepturi facilis corrupti illum. Aliquid?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>                                                                                         
+        </section>
+
+        <section id="moda" class="pt-5 pb-5">                                                                   <!--"pt-5 pb-5" => padding-top e padding-bottom-->
+            <div class="container">                 
+                <div class="row">
+                    <h2 class="section-title text-center">Moda para todos os <span class="text-colored">públicos</span></h2>     <!--"text-center" => classe do bootstrap para centralizar o texto na horizontal-->
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="/images/Moda/feminia.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">                                            <!--para estilizar a fonte / fs => font-size-->
+                            <i class="bi bi-calendar-heart-fill"></i>                                           <!--"bi bi-calendar-heart-fill" => bi(ootstrap icon) / heart-fill(coração vazio)-->
+                            Feminina
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis. Commodi quos quod nisi architecto! Recusandae repudiandae fuga dicta, voluptatum, totam aspernatur ea autem nisi voluptates quibusdam nobis accusamus numquam.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/images/Moda/masculina.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">                                            <!--para estilizar a fonte / fs => font-size-->
+                            <i class="bi bi-arrow-through-heart-fill"></i>                                      <!--"bi bi-arrow-through-heart-fill" => bi(ootstrap icon) / arrow-through-heart-fill (flecha atravessando um coração vazio)-->
+                            Masculina
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis. Commodi quos quod nisi architecto! Recusandae repudiandae fuga dicta, voluptatum, totam aspernatur ea autem nisi voluptates quibusdam nobis accusamus numquam.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="/images/Moda/infantil1.jpg" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">                                            <!--para estilizar a fonte / fs => font-size-->
+                            <i class="bi bi-people-fill"></i>                                                   <!--"bi bi-calendar-heart-fill" => bi(ootstrap icon) / people-fill(pessoas)-->
+                            Adulto e Infantil
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis. Commodi quos quod nisi architecto! Recusandae repudiandae fuga dicta, voluptatum, totam aspernatur ea autem nisi voluptates quibusdam nobis accusamus numquam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center mb-5">                                                                 <!--"text-center" => classe do bootstrap para centralizar o texto na horizontal-->
+                        Nossos <span class="text-colored">produtos</span>
+                    </h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column nav-produtos">                                                    <!--para eliminar o hover e estilizaro botão ativo-->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#sarja" class="fw-bold text-start nav-link text-colored active">Sarja</button>           <!--"nav-link" => classe bootstrap (já estilizada)-->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#bailarina" class="fw-bold text-start nav-link text-colored">Bailarina</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#leg" class="fw-bold text-start nav-link text-colored">Leg</button>                      <!--"fw" => font-weigth / "text-start" => texto justificado à esquerda-->
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#pantalona" class="fw-bold text-start nav-link text-colored">Pantalona</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#jeans" class="fw-bold text-start nav-link text-colored">Jeans</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#novidades" class="fw-bold text-start nav-link text-colored">Novidades</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="sarja">                                                            <!--"pane" => classe painel do bootstrap-->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/sarja1.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Masculino</h5>
+                                        <p>
+                                            Tam: 38, 42, 44, 48 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/sarja2.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Masculino</h5>
+                                        <p>
+                                            Tam: 38, 42, 44, 48 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/sarja3.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Masculino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44, 48 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/sarja4.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Masculino</h5>
+                                        <p>
+                                            Tam: 38, 42, 44, 48 
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/sarja5.jpeg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Masculino</h5>
+                                        <p>
+                                            Tam: 40, 42, 44, 48 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane active" id="bailarina">                                                            <!--"pane" => classe painel do bootstrap-->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/bailarina1.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/bailarina3.jpeg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/bailarina4.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/bailarina5.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="leg">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/leg1.jpg" alt="Cerveja"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/leg2.jpeg" alt="Cerveja"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/leg3.webp" alt="Cerveja"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="pantalona">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/pantalona1.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/pantalona2.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/pantalona4.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/calça pantalona4.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/pantalona5.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/feminina/pantalona5.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="jeans">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans1.1.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans2.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans3.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans4.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans5.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans6.jpg"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans7.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="images/masculina/calça jeans8.webp"/>
+                                        <h5 class="text-colored fw-bold mt-2">Sexo: Feminino</h5>
+                                        <p>
+                                            Tam: 38, 40, 42, 44
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="novidades">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5 class="text-colored fw-bold mt-2">Novidades em breve!</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fale-conosco" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Fale <span class="text-colored">conosco</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5" >
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>                      <!--"form-label" => classe bootstrap-->
+                                <input type="text" id="nome" class="form-control" name="nome" required>                         <!--"form-control" => classe bootstrap-->
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold text-colored">Seu e-mail</label>                   <!--"form-label" => classe bootstrap-->
+                                <input type="text" id="email" class="form-control" name="email" required placeholder="xxx@xxx.xxx">                     <!--"form-control" => classe bootstrap-->
+                            </div>
+                            <div class="telefones">
+                                <div class="mb-3">
+                                    <label for="telefone" class="form-label fw-bold text-colored">Seu telefone fixo</label>     <!--"form-label" => classe bootstrap-->
+                                    <input type="tel" id="telefone" class="form-control" name="telefone" required placeholder="(00) 0000-0000">                  <!--"form-control" => classe bootstrap-->
+                                </div>
+                                <div class="mb-3">
+                                    <label for="celular" class="form-label fw-bold text-colored">Seu celular</label>            <!--"form-label" => classe bootstrap-->
+                                    <input type="tel" id="celular" class="form-control" name="celular" required placeholder="(00) 00000-0000">                  <!--"form-control" => classe bootstrap-->
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold text-colored">Sua mensagem</label>              <!--"form-label" => classe bootstrap-->
+                                <textarea class="form-control" id="mensagem" name="mensagem" required></textarea>               <!--"form-control" => classe bootstrap-->
+                            </div>
+                            <button type="submit" class="btn fw-bold">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-title fs-4 text-colored">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>                                                       <!--classe bootstrap para um joinha-->
+                                Redes sociais
+                            </h3>
+                            <ul class="social-links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook text-colored"></i>                                             <!--"i" => tag icon / "bi bi-facebook" => classe boostrap-->
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-1 me-1">                                                                     <!--"fs-5 => font-size / "ms-1" => margin-start (à esquerda)/ me-1" => margin-end (à direita) -->
+                                    <a href="#">
+                                        <i class="bi bi-instagram text-colored"></i>                                            <!--"i" => tag icon / "bi bi-instagram" => classe boostrap-->
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-youtube text-colored"></i>                                              <!--"i" => tag icon / "bi bi-youtube" => classe boostrap-->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-title fs-4 text-colored">
+                                <i class="bi bi-cursor-fill"></i>                                               <!--classe bootstrap para um ponteiro-->
+                                Endereço
+                            </h3>
+                            <p>
+                                Av. Guarulhos, 3202 - 07031-000 - Ponte Grande - Guarulhos - São Paulo
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="rodape"> 
+            &copy; Loja de calças - Todos os direitos reservados - 2019
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>     <!--plugin jquery-->
+    <script src="./js/jquery.mask.min.js"></script>                         <!--plugin máscaras jquery-->
+    <script src="./js/jquery.validate.min.js"></script>                     <!--plugin validador de formulário jquery (baixado em jqueryvalidation.org)-->
+    <script src="/lib/bootstrap.bundle.min.js"></script>                    <!--código bootstrap javascript-->
+    <script src="./js/main.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>                      <!--código com a tradução para português da mensagem de validação do formulário-->
+</body>
+</html>
