@@ -10,4 +10,15 @@ Além da exposição, o projeto possui as seções:
 </ul>
 <h2>Layout mobile</h2>
 <h2>Layout web</h2>
+<h2>Tecnologias utilizadas</h2>
+<h2>Implantação</h2>
+
+<h1>Como executar o projeto</h1>
+Pré requisitos: HTML, CSS, JavaScript
+<ol>
+  <h3>Clonar o repositório</h3>
+  <h3>Entrar na pasta do projeto</h3>
+  <h3>Executar o projeto</h3>
+</ol>
+
 
