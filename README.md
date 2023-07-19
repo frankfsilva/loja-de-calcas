@@ -8,3 +8,6 @@ Além da exposição, o projeto possui as seções:
   <li>Produtos</li>
   <li>Fale conosco</li>
 </ul>
+<h2>Layout mobile</h2>
+<h2>Layout web</h2>
+
